@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Administrator</class>
+ <widget class="QMainWindow" name="Administrator">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1171</width>
+    <height>802</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTreeWidget" name="treeWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>1</y>
+      <width>181</width>
+      <height>801</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string>订单和商品管理</string>
+     </property>
+    </column>
+    <item>
+     <property name="text">
+      <string>订单</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>已付款</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>已发货</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>已签收</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>退货申请</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>退货中</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>已退货</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>已取消</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>商品</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>添加商品</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>进货</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>修改商品信息</string>
+      </property>
+     </item>
+    </item>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>10</y>
+      <width>921</width>
+      <height>781</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QTableWidget" name="good_table">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>160</y>
+        <width>911</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>215</number>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>商品编号</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>商品名称</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>价格</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>库存</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="pushButton_G">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>100</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>搜索</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>搜索商品</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_G">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>商品编号</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_G_d">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>690</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>删除</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>650</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>删除商品</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_G_d">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>690</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>商品编号</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_G_A">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>100</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>商品编号</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_G_An">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>100</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>数量</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_G_Add">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>100</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>入库</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>60</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>进货</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>60</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>进货数量</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QPushButton" name="pushButton_R">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>100</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>搜索</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>搜索订单ID</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>70</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>搜索客户ID</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_R">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>订单ID</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="reserve_table">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>160</y>
+        <width>911</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <property name="gridStyle">
+       <enum>Qt::SolidLine</enum>
+      </property>
+      <property name="sortingEnabled">
+       <bool>false</bool>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>105</number>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>订单ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>客户ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>商品数量</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>金额</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>日期</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>联系电话</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>收货地址</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>状态</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_C">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>100</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>客户ID</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_C">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>100</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>搜索</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_R_d">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>690</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>删除</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>650</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>删除订单</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_R_d">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>690</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>订单ID</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <widget class="QTableWidget" name="good_table_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>160</y>
+        <width>911</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>215</number>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>商品编号</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>商品名称</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>价格</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>库存</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>搜索商品</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_G_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>商品编号</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_G_2">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>100</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>搜索</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1171</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
